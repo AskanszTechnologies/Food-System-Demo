@@ -13,21 +13,29 @@
 <body>
   <header>
     <h1>🍔 Food Order Demo</h1>
+    <button id="cart-fab" aria-label="View cart">
+      🛒 <span id="cart-count">0</span>
+    </button>
   </header>
   <main>
     <section id="menu">
       <h2>Menu</h2>
       <ul id="menu-list"></ul>
     </section>
-    <section id="cart">
-      <h2>Your Cart</h2>
-      <ul id="cart-list"></ul>
-      <div class="cart-summary">
-        <span id="cart-total">$0.00</span>
-        <button id="place-order">Place Order</button>
+    <section id="cart-modal" class="modal hidden" aria-modal="true" role="dialog">
+      <div class="modal-content">
+        <span class="close" id="close-cart">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-list"></ul>
+        <div class="cart-summary">
+          <span id="cart-total">$0.00</span>
+          <button id="place-order">Place Order</button>
+        </div>
+        <button id="clear-cart" class="clear-cart">Clear Cart</button>
+        <div id="order-msg"></div>
       </div>
     </section>
-    <div id="order-msg"></div>
+    <div id="overlay" class="hidden"></div>
   </main>
   <script src="app.js"></script>
 </body>
