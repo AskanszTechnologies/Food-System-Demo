@@ -1,13 +1,18 @@
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('food-order-demo-v1').then(cache => {
+    caches.open('food-order-demo-v2').then(cache => {
       return cache.addAll([
         '/',
         '/index.html',
         '/style.css',
         '/app.js',
         '/manifest.json',
-        '/icon.png'
+        '/icon.png',
+        '/cheeseburger.png',
+        '/pizza.png',
+        '/salad.png',
+        '/fries.png',
+        '/milkshake.png'
       ]);
     })
   );
